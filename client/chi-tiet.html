@@ -1,178 +1,107 @@
-<!DOCTYPE HTML>
-<html>
-
-<head>
-	<title>TRUNG TÂM ĐÀO TẠO LẬP TRÌNH VINAENTER</title>
-	<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
-	<link href="css/style.css" rel='stylesheet' type='text/css' />
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="keywords" content="vinaneter, php, java, android, ios, laravel, codeigniter" />
-	<script
-		type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-	<!----webfonts---->
-	<link href='http://fonts.googleapis.com/css?family=Oswald:100,400,300,700' rel='stylesheet' type='text/css'>
-	<link
-		href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,300italic,400italic,600italic'
-		rel='stylesheet' type='text/css'>
-	<!----//webfonts---->
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	<!--end slider -->
-	<!--script-->
-	<script type="text/javascript" src="js/move-top.js"></script>
-	<script type="text/javascript" src="js/easing.js"></script>
-	<!--/script-->
-	<script type="text/javascript">
-		jQuery(document).ready(function ($) {
-			$(".scroll").click(function (event) {
-				event.preventDefault();
-				$('html,body').animate({ scrollTop: $(this.hash).offset().top }, 900);
-			});
-		});
-	</script>
-	<!---->
-
-</head>
-
-<body>
-	<!---strat-banner---->
-	<div class="banner">
-		<div class="header">
-			<div class="container">
-				<div class="logo">
-					<a href="/"> <img src="images/logo.png" title="soup" /></a>
-				</div>
-				<!---start-top-nav---->
-				<div class="top-menu">
-					<span class="menu"> </span>
-					<ul>
-						<li class="active"><a href="index.html">Trang chủ</a></li>
-						<div class="clearfix"> </div>
-					</ul>
-				</div>
-				<div class="clearfix"></div>
-				<script>
-					$("span.menu").click(function () {
-						$(".top-menu ul").slideToggle("slow", function () {
-						});
-					});
-				</script>
-				<!---//End-top-nav---->
-			</div>
-		</div>
-		<div class="container">
-			<div class="banner-head">
-				<h1>NHỮNG NGƯỜI BẠN THÂN CỦA TÔI</h1>
-			</div>
-			<div class="banner-links">
-				<ul>
-					<li class="active"><a href="index.html">Những người bạn</a></li>
-					<li><a href="lien-he.html">Liên hệ</a></li>
-					<div class="clearfix"></div>
-				</ul>
-			</div>
-		</div>
-	</div>
-	<!---//End-banner---->
-	<div class="content">
-		<div class="container">
-			<div class="content-grids">
-				<div class="col-md-8 content-main">
-					<div class="content-grid">
-						<div class="content-grid-head">
-							<h3>BẠN QUEN THỜI PHỔ THÔNG</h3>
-							<h4>Đăng ngày: 12/08/2016 - Lượt xem: 30</h4>
-							<div class="clearfix"></div>
+<!--script-->
+<script src="lib/jquery.min.js"></script>
+<script type="text/javascript" src="../lib/move-top.js"></script>
+<script type="text/javascript" src="../lib/easing.js"></script>
+<!--/script-->
+<script>
+	$(document).ready(function () {
+		$("#header").load("./inc/header.html");
+		$(".categories").load("./inc/side-bar.html");
+		$(".copywrite").load("./inc/footer.html");
+	});
+</script>
+<div id="header"></div>
+<!---//End-banner---->
+<div class="content">
+	<div class="container">
+		<div class="content-grids">
+			<div class="col-md-8 content-main">
+				<div class="content-grid">
+					<div class="content-grid-head">
+						<h3>BẠN QUEN THỜI PHỔ THÔNG</h3>
+						<h4>Đăng ngày: 12/08/2016 - Lượt xem: 30</h4>
+						<div class="clearfix"></div>
+					</div>
+					<div class="content-grid-single">
+						<h3>Trần Thị Diệu Thảo</h3>
+						<div class="detail_text">
+							<span>Tôi và thằng bạn thân vẫn chia sẻ, trò chuyện trước những tin vịt đã truyền qua
+								lớp khác.</span>
+							<img class="single-pic" src="images/anh1.jpg" alt="">
+							<p>Tôi và thằng bạn thân vẫn chia sẻ, trò chuyện trước những tin vịt đã truyền qua lớp
+								khác. Câu chuyện chủ yếu xoay quanh những căng thẳng, áp lực trước hai kì thi quan
+								trọng của đời học sinh. Những tình cảm rung động đầu đời...</p>
 						</div>
-						<div class="content-grid-single">
-							<h3>Trần Thị Diệu Thảo</h3>
-							<div class="detail_text">
-								<span>Tôi và thằng bạn thân vẫn chia sẻ, trò chuyện trước những tin vịt đã truyền qua
-									lớp khác.</span>
-								<img class="single-pic" src="images/anh1.jpg" alt="">
-								<p>Tôi và thằng bạn thân vẫn chia sẻ, trò chuyện trước những tin vịt đã truyền qua lớp
-									khác. Câu chuyện chủ yếu xoay quanh những căng thẳng, áp lực trước hai kì thi quan
-									trọng của đời học sinh. Những tình cảm rung động đầu đời...</p>
+						<div class="comments">
+							<h3>Bạn thân khác của tôi</h3>
+							<div class="comment-grid">
+								<img src="images/anh2.jpg" alt="">
+								<div class="comment-info">
+									<h4><a href="chi-tiet.html">Nguyễn Văn Hùng</a></h4>
+									<p>Hùng sinh ra trong một gia đình giỏi IT. Bố Hùng hiện đang là cố vấn sản phẩm
+										chủ lực của Microsoft. Mẹ cũng là 1 lập trình viên cừ khôi tại tập đoàn
+										VinaEnter.</p>
+								</div>
+								<div class="clearfix"></div>
 							</div>
-							<div class="comments">
-								<h3>Bạn thân khác của tôi</h3>
-								<div class="comment-grid">
-									<img src="images/anh2.jpg" alt="">
-									<div class="comment-info">
-										<h4><a href="chi-tiet.html">Nguyễn Văn Hùng</a></h4>
-										<p>Hùng sinh ra trong một gia đình giỏi IT. Bố Hùng hiện đang là cố vấn sản phẩm
-											chủ lực của Microsoft. Mẹ cũng là 1 lập trình viên cừ khôi tại tập đoàn
-											VinaEnter.</p>
-									</div>
-									<div class="clearfix"></div>
-								</div>
 
-								<div class="comment-grid">
-									<img src="images/anh1.jpg" alt="">
-									<div class="comment-info">
-										<h4><a href="chi-tiet.html">Trần Nguyễn Gia Huy</a></h4>
-										<p>Huy là bạn của tôi hồi còn mẫu giáo. Tôi còn nhớ cậu nói: Bạn thích ăn kẹo
-											không mình mang đến cho...</p>
-									</div>
-									<div class="clearfix"></div>
+							<div class="comment-grid">
+								<img src="images/anh1.jpg" alt="">
+								<div class="comment-info">
+									<h4><a href="chi-tiet.html">Trần Nguyễn Gia Huy</a></h4>
+									<p>Huy là bạn của tôi hồi còn mẫu giáo. Tôi còn nhớ cậu nói: Bạn thích ăn kẹo
+										không mình mang đến cho...</p>
 								</div>
+								<div class="clearfix"></div>
 							</div>
 						</div>
-
 					</div>
+
 				</div>
-
-				<div class="col-md-4 content-main-right">
-					<div class="search">
-						<h3>TÌM BẠN TÔI</h3>
-						<form>
-							<input type="text" value="" onfocus="this.value=''" onblur="this.value=''">
-							<input type="submit" value="">
-						</form>
-					</div>
-
-					<div class="categories">
-						<h3>DANH MỤC BẠN BÈ</h3>
-						<li class="active"><a href="danh-muc.html">Bạn quen thời phổ thông</a></li>
-						<li><a href="danh-muc.html">Bạn quen thời đại học</a></li>
-						<li><a href="danh-muc.html">Bạn tâm giao</a></li>
-					</div>
-
-					<div class="archives">
-						<h3>Liên kết VinaEnter</h3>
-						<li class="active"><a href="http://vinaenter.edu.vn/lap-trinh-php-tu-az.html"
-								target="_blank"><img width="100%" src="images/php.png" alt="" /></a></li>
-						<li><a href="http://vinaenter.edu.vn/lap-trinh-java-tu-az.html" target="_blank"><img
-									width="100%" src="images/java.png" alt="" /></a></li>
-						<li><a href="http://vinaenter.edu.vn/lap-trinh-android-tu-az.html" target="_blank"><img
-									width="100%" src="images/android.png" alt="" /></a></li>
-					</div>
-				</div>
-				<div class="clearfix"></div>
 			</div>
-		</div>
-	</div>
 
-	<div class="copywrite">
-		<div class="container">
-			<p>Copyrights &copy; 2016 <a href="http://vinaenter.edu.vn">VinaEnter Edu</a>. All rights reserved</p>
+			<div class="col-md-4 content-main-right">
+				<div class="search">
+					<h3>TÌM BẠN TÔI</h3>
+					<form>
+						<input type="text" value="" onfocus="this.value=''" onblur="this.value=''">
+						<input type="submit" value="">
+					</form>
+				</div>
+
+				<div class="categories"></div>
+
+				<div class="archives">
+					<h3>Liên kết VinaEnter</h3>
+					<li class="active"><a href="http://vinaenter.edu.vn/lap-trinh-php-tu-az.html" target="_blank"><img
+								width="100%" src="images/php.png" alt="" /></a></li>
+					<li><a href="http://vinaenter.edu.vn/lap-trinh-java-tu-az.html" target="_blank"><img width="100%"
+								src="images/java.png" alt="" /></a></li>
+					<li><a href="http://vinaenter.edu.vn/lap-trinh-android-tu-az.html" target="_blank"><img width="100%"
+								src="images/android.png" alt="" /></a></li>
+				</div>
+			</div>
+			<div class="clearfix"></div>
 		</div>
 	</div>
-	<!---->
-	<script type="text/javascript">
-		$(document).ready(function () {
-			/*
-			var defaults = {
-			containerID: 'toTop', // fading element id
-			containerHoverID: 'toTopHover', // fading element hover id
-			scrollSpeed: 1200,
-			easingType: 'linear' 
-			};
-			*/
-			$().UItoTop({ easingType: 'easeOutQuart' });
-		});
-	</script>
-	<a href="#to-top" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+</div>
+
+<div class="copywrite"></div>
+<!---->
+<script type="text/javascript">
+	$(document).ready(function () {
+		/*
+		var defaults = {
+		containerID: 'toTop', // fading element id
+		containerHoverID: 'toTopHover', // fading element hover id
+		scrollSpeed: 1200,
+		easingType: 'linear' 
+		};
+		*/
+		$().UItoTop({ easingType: 'easeOutQuart' });
+	});
+</script>
+<a href="#to-top" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 
 
 </body>
