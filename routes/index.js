@@ -1,8 +1,8 @@
-const newsRouter = require('./news');
+const friendRouter = require('./friend');
 const categoryRouter = require('./category');
 
 function route(app) {
-    app.use('/news', newsRouter);
+    app.use('/friend', friendRouter);
     app.use('/cat', categoryRouter);
 }
 
