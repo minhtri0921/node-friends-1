@@ -48,25 +48,25 @@ class FriendController {
         }
     }
 
-    // // [GET] /news/newsbyid
-    // async getNewsById(req, res) {
-    //     var id = req.query.id;
-    //     try {
-    //         var conn = mysql.createConnection(configDB);
+    // [GET] /friend/friend-by-id
+    async getFriendById(req, res) {
+        var id = req.query.id;
+        try {
+            var conn = mysql.createConnection(configDB);
 
-    //         const newsById = await new Promise((resolve, reject) => {
-    //             conn.query(`SELECT * FROM news WHERE id = ${id}`, (err, row) => {
-    //                 if (err) reject(err);
-    //                 resolve(row);
-    //             })
-    //         })
-    //         res.status(200).send(newsById[0]);
-    //     } catch (err) {
-    //         res.status(500).send(err);
-    //     } finally {
-    //         conn.end();
-    //     }
-    // }
+            const friendById = await new Promise((resolve, reject) => {
+                conn.query(`SELECT * FROM friends WHERE id = ${id}`, (err, row) => {
+                    if (err) reject(err);
+                    resolve(row);
+                })
+            })
+            res.status(200).send(friendById[0]);
+        } catch (err) {
+            res.status(500).send(err);
+        } finally {
+            conn.end();
+        }
+    }
 
     // // [POST] /news/contact
     // async postContact(req, res) {
