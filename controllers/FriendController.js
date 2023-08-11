@@ -68,30 +68,30 @@ class FriendController {
         }
     }
 
-    // // [POST] /news/contact
-    // async postContact(req, res, next) {
-    //     const { name, phone, web, gender, content, file } = req.form_data;
+    // [POST] /friend/contact
+    async postContact(req, res, next) {
+        const { name, email, phone, message, file } = req.form_data;
 
-    //     try {
-    //         var conn = mysql.createConnection(configDB);
+        try {
+            var conn = mysql.createConnection(configDB);
 
-    //         await new Promise((resolve, reject) => {
-    //             conn.query(`INSERT INTO contact (name, phone, web, gender, picture, content) VALUES (?, ?, ?, ?, ?, ?)`,
-    //                 [name, phone, web, gender, file, content], function (err, result) {
-    //                     if (err) {
-    //                         reject(err);
-    //                     }
-    //                     resolve(result);
-    //                 });
-    //         })
-    //         res.status(200).send('OK');
-    //     } catch (err) {
-    //         console.log(err);
-    //         res.status(500).send('NOK');
-    //     } finally {
-    //         conn.end();
-    //     }
-    // }
+            await new Promise((resolve, reject) => {
+                conn.query(`INSERT INTO contact (name, email, phone, avatar, message) VALUES (?, ?, ?, ?, ?)`,
+                    [name, email, phone, file, message], function (err, result) {
+                        if (err) {
+                            reject(err);
+                        }
+                        resolve(result);
+                    });
+            })
+            res.status(200).send('OK');
+        } catch (err) {
+            console.log(err);
+            next(err);
+        } finally {
+            conn.end();
+        }
+    }
 }
 
 module.exports = new FriendController();

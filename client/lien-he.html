@@ -15,14 +15,16 @@
 	<div class="container">
 		<div class="contact-head">
 			<h3>Liên hệ</h3>
-			<form>
+			<p id="msg"></p>
+			<form id="frmContact">
 				<div class="col-md-6 contact-left">
-					<input type="text" placeholder="Name" required="">
-					<input type="text" placeholder="E-mail" required="">
-					<input type="text" placeholder="Phone" required="">
+					<input type="text" placeholder="Name" name="name">
+					<input type="text" placeholder="E-mail" name="email">
+					<input type="text" placeholder="Phone" name="phone">
+					<input type="file">Ảnh đại diện:
 				</div>
 				<div class="col-md-6 contact-right">
-					<textarea placeholder="Message"></textarea>
+					<textarea placeholder="Message" name="message"></textarea>
 					<input type="submit" value="SEND">
 				</div>
 				<div class="clearfix"></div>
@@ -48,6 +50,8 @@
 </script>
 <a href="#to-top" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 
+<script src="lib/axios.min.js"></script>
+<script src="js/lienhe.js"></script>
 
 </body>
 
