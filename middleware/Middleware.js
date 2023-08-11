@@ -13,9 +13,6 @@ class Middleware {
             if (err) {
                 res.sendStatus(500);
             } else {
-                // for (var key in fields) {
-                //     formData[key] = fields[key];
-                // }
                 formData = fields;
                 var isSelectedFile = !(Object.entries(files).length === 0 && files.constructor === Object);
                 var key = "file";

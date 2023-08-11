@@ -21,7 +21,7 @@
 					<input type="text" placeholder="Name" name="name">
 					<input type="text" placeholder="E-mail" name="email">
 					<input type="text" placeholder="Phone" name="phone">
-					<input type="file">Ảnh đại diện:
+					<input type="file">Ảnh đại diện
 				</div>
 				<div class="col-md-6 contact-right">
 					<textarea placeholder="Message" name="message"></textarea>
@@ -37,22 +37,12 @@
 <!---->
 <script type="text/javascript">
 	$(document).ready(function () {
-		/*
-		var defaults = {
-		containerID: 'toTop', // fading element id
-		containerHoverID: 'toTopHover', // fading element hover id
-		scrollSpeed: 1200,
-		easingType: 'linear' 
-		};
-		*/
 		$().UItoTop({ easingType: 'easeOutQuart' });
 	});
 </script>
-<a href="#to-top" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
-
 <script src="lib/axios.min.js"></script>
 <script src="js/lienhe.js"></script>
-
+<a href="#to-top" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 </body>
 
 </html>
