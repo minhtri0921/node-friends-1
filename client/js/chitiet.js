@@ -14,7 +14,7 @@ async function getData() {
     try {
         var friendById = await axios.get(`http://localhost:3000/friend/friend-by-id?id=${dId}`);
         friendById = friendById.data;
-        var catById = await axios.get(`http://localhost:3000/cat/catbyid?id=${friendById.cat_id}`);
+        var catById = await axios.get(`http://localhost:3000/cat/cat-by-id?id=${friendById.cat_id}`);
         catById = catById.data;
 
         var dateElement = $('#date');

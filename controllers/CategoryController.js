@@ -10,7 +10,7 @@ const configDB = {
 class CategoryController {
 
     // [GET] /cat
-    async getListCats(req, res) {
+    async getListCats(req, res, next) {
         try {
             var conn = mysql.createConnection(configDB);
 
@@ -22,14 +22,14 @@ class CategoryController {
             })
             res.status(200).send(listCats);
         } catch (err) {
-            res.status(500).send(err);
+            next(err);
         } finally {
             conn.end();
         }
     }
 
     // [GET] /cat/catbyid
-    async getCatById(req, res) {
+    async getCatById(req, res, next) {
         var id = req.query.id;
         try {
             var conn = mysql.createConnection(configDB);
@@ -42,7 +42,7 @@ class CategoryController {
             })
             res.status(200).send(catById[0]);
         } catch (err) {
-            res.status(500).send(err);
+            next(err);
         } finally {
             conn.end();
         }

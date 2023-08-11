@@ -10,7 +10,7 @@ const configDB = {
 class FriendController {
 
     // [GET] /friend
-    async getListFriends(req, res) {
+    async getListFriends(req, res, next) {
         try {
             var conn = mysql.createConnection(configDB);
 
@@ -22,14 +22,14 @@ class FriendController {
             })
             res.status(200).send(listFriends);
         } catch (err) {
-            res.status(500).send(err);
+            next(err);
         } finally {
             conn.end();
         }
     }
 
     // [GET] /friend/friends-by-cat
-    async getListFriendsByCat(req, res) {
+    async getListFriendsByCat(req, res, next) {
         var catId = req.query.cid;
         try {
             var conn = mysql.createConnection(configDB);
@@ -42,14 +42,14 @@ class FriendController {
             })
             res.status(200).send(listFriendsByCat);
         } catch (err) {
-            res.status(500).send(err);
+            next(err);
         } finally {
             conn.end();
         }
     }
 
     // [GET] /friend/friend-by-id
-    async getFriendById(req, res) {
+    async getFriendById(req, res, next) {
         var id = req.query.id;
         try {
             var conn = mysql.createConnection(configDB);
@@ -62,14 +62,14 @@ class FriendController {
             })
             res.status(200).send(friendById[0]);
         } catch (err) {
-            res.status(500).send(err);
+            next(err);
         } finally {
             conn.end();
         }
     }
 
     // // [POST] /news/contact
-    // async postContact(req, res) {
+    // async postContact(req, res, next) {
     //     const { name, phone, web, gender, content, file } = req.form_data;
 
     //     try {
